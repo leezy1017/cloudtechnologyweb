@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="css/style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+ <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+
+</head>
+<body>
+<header class="header">
+
+  <a href="index.html" class="logo"> <img src="img/logo.jpg" alt="Cloud Technology" ></a>
+  
+  
+<img src="img/Asset 3.png" alt="Asset"  align="right" width="5%">
+<img src="img/Asset 2.png" alt="Asset"  align="right" width="5%">
+<img src="img/Asset 1.png" alt="Asset"  align="right" width="5%">
+  
+   <center>
+   <h1 style="font-size:160%;"> &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;   Cloud Technology </h1> </center>
+   
+</header>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="index.html">Cloud Technology</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Home</a></li>
+      <li><a href="vc.html">Virtualization and Containerization</a></li>
+      <li><a href="dc.html">Data center</a></li>
+      <li><a href="kd.html">Kubernetes vs Docker</a></li>
+	   <li><a href="t.html">Tutorial</a></li>
+    </ul>
+  </div>
+</nav>
+  <h1> Q:What is virtualization?</h1>
+  It is installed on the top of a physical layer. It is also known as bare-metal virtualization as there is no OS and any other software present in between. It schedules the VM resources to the hardware directly.
+ Example of virtualizationis  VMware and Oracle VirtualBox.When the user wants to execute the multiple OS on the PC then the user can prefer type 2 hypervisor. It can also be used whenever a small deployment is needed because it supports the guest
+  VM by making CPU calls and coordinating with memory, network, etc. It makes it simple for the end-user to execute VM on PC.
+  <br>
+  There is no requirement to establish the machines, local network, and other IT components. If there is one point of access to the VM is present then it can easily spread to the rest of the company.
+ It provides the automatic update of software and hardware features. By implementing the virtualization IT department can save time and reduce the cost of updates.
+The cost to create the on-site resource will be eliminated as there is no requirement of a large space for it. The company just needs the license from the provider and hardware which are already installed.
+  
+  <center>  <img src="img/03.png"> </center>
+<h1> Q: What is containerization? </h1>
+<p align="justify">Containers, light-weight software applications, offer a number of benefits including reduction in time to deliver an application, scalability, ease of application management, support and better user-experience.
+
+
+Firstly, containers do not require a guest OS. They are software programs. All applications within a container run in the User Space of the OS which is line with the design of a host OS whereby only kernel is given its dedicated space. This allows applications to communicate with the CPU without passing through the guest operating system and then the hypervisor. As a result, containers offer better performance.
+
+The elements of a container architecture includes files, environment variables, dependencies and libraries. The host OS constrains the container's access to physical resources, such as CPU, storage and memory, so a single container cannot consume all of a host's physical resources.
+
+
+Containers contain images which hold the entire information that the containers need to execute. 
+Containers encourage splitting monolithic applications into micro-applications and then setting up communication amongst them. 
+The fundamentals of microservices allow IT teams to only enhance, implement and deploy the required parts of the applications. </p>
+<h1> Q: How do they compare ? </h1>
+ <h3>Speed </h3>
+ <p align="justify">When it comes to speed, containers were meant to significantly reduce the time needed to deploy and run an application. The container starts immediately, since the operating system is already up and running, so the application will start up without any noticeable delay. This is an excellent solution for a development environment, mainly, as it saves time in the application testing cycle. On the other hand, virtual machines need to start the entire operating system, which includes the full boot process. This will also include the startup of the services, and it will take much longer than it would for a container.
+
+
+·       <h3> Resources </h3>
+Since virtual servers run separate operating systems,
+ and every system call has to go through the virtualization layer,
+ a certain amount of overhead is created, causing more resources to be used. 
+ This is particularly true for memory usage, as virtual machines consume memory even 
+ when they aren't running any user processes. However, CPU virtualization is relatively cheap,
+ so the CPU overhead of a virtual machine can be much smaller. When it comes to containers, they 
+ can start up pretty quickly, so their memory consumption doesn't increase. There is also much less overhead as
+ they are using the same operating system without a hypervisor to go through.
+
+
+·        <h3>Security and isolation</h3>
+ In regard to security and isolation,
+ virtualization wins, as it keeps virtual machines separate and isolated from each other.
+ One infected virtual machine will not affect another one, and each virtual machine can incorporate its
+ own security protocols since they are running in a fully isolated environment. However, since containers only 
+ isolate data and applications at the process level, they provide a less secure environment and depend on the security protocols of the host system.
+
+·       <h3> Portability and application sharing</h3>
+ Since container images are much smaller than virtual machines, they are easier to 
+ transfer and save space on the host's filesystem. Virtual machines, on the other hand,
+ need to have a copy of the whole operating system, including the kernel, system libraries, 
+ configuration files, all the directories required by the operating system and all the utilities.
+ This dramatically increases the size of the image and is not that easy to share. Container images 
+ can be shared in any manner of ways, and there are a number of application sharing hubs on the internet.
+ Virtual machine images do not have such centralized hubs and would usually need to be uploaded to another server instead.
+
+·        <h3>Operating system requirements</h3>
+ A virtual machine is best used in the case when a business needs to run multiple applications 
+ that require the full functionality of a dedicated operating system. However, if most of the applications 
+ have the same operating system requirements, the containers would be a much more practical solution.
+
+
+·       <h3> Application lifecycle</h3> Containers are highly suitable for short-term application needs, 
+as they can be set up quickly, are portable, and can be started up much faster. They are, however, 
+limited by the lack of a dedicated operating system, processing, and storage resources. Containers should be 
+used when the biggest priority is maximizing the number of applications running on a minimal amount of servers.
+ However, virtual machines are far better suited for applications that need to be used for an extended period of time,
+ since they run in a virtualized environment that is more robust and versatile. </p>
+ <br> <br> <br> <br>
+
+<footer class="footer">
+
+  <p> Designed by Moe </p>
+
+</footer>
+</body>
+</html>
